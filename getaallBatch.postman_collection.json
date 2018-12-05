@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "32c9bc89-6305-4e6b-97ea-39f0c2d0e227",
+		"name": "getaallBatch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllBatchScanStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer c47db87f-1651-390f-b98c-673a7755ab18"
+					},
+					{
+						"key": "appKey",
+						"value": "ECM_LTC_RO"
+					},
+					{
+						"key": "uid",
+						"value": "anilkumar"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data; boundary=----WebKitFormBoundarywtoIhwUTRpzMVhVk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "------WebKitFormBoundarywtoIhwUTRpzMVhVk\r\nContent-Disposition: form-data; name=\"requestInfo\"; filename=\"blob\"\r\nContent-Type: application/json\r\n\r\n{\"uploadedBy\":\"anilkumar\",\"agencyCode\":\"DHS\",\"ownerSystem\":\"ECMS\",\"originatingSystem\":\"ECMS\"}\r\n------WebKitFormBoundarywtoIhwUTRpzMVhVk\r\nContent-Disposition: form-data; name=\"appMap\"; filename=\"blob\"\r\nContent-Type: application/json\r\n\r\n[\"CS\",\"Test1\",\"CJAMS\",\"PRU\",\"ECMS\",\"test\",\"PIP\",\"LTC\",\"DEMO\"]\r\n------WebKitFormBoundarywtoIhwUTRpzMVhVk--"
+				},
+				"url": "http://dev-apigateway-int.mdcloud.local:8280/api/ecm/dev/document/v3/getAllBatchScanStatus"
+			},
+			"response": []
+		}
+	]
+}
