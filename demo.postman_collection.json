@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "d8c72951-36bc-499b-a95e-0a637cbbd691",
+		"name": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Anji\",\n\t\"age\":\"80\",\n\t\"phone\":\"98989555\"\n}\t"
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo/user/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"user",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/user/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUserDetails",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/demo/user/getAllUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"demo",
+						"user",
+						"getAllUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUserDetails-ReverProxy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/demo/user/getAllUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"demo",
+						"user",
+						"getAllUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":null,\"name\":\"suri\",\"phone\":\"9908088795\",\"age\":\"45\"}"
+				},
+				"url": {
+					"raw": "http://localhost/demo/user/updateUserDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"demo",
+						"user",
+						"updateUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/user/deleteUserDetails/5c083787ddcc3252f87bf858",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"deleteUserDetails",
+						"5c083787ddcc3252f87bf858"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/aop/getPerson",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"anil\",\n\t\"age\":26\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/aop/getPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aop",
+						"getPerson"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
