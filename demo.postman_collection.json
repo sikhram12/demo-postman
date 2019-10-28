@@ -6,210 +6,378 @@
 	},
 	"item": [
 		{
-			"name": "createUser",
-			"request": {
-				"auth": {
-					"type": "noauth"
+			"name": "UserDetails",
+			"item": [
+				{
+					"name": "localhost:8080/aop/getPerson",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"anil\",\n\t\"age\":26\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/aop/getPerson",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"aop",
+								"getPerson"
+							]
+						}
+					},
+					"response": []
 				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"name\":\"Anji\",\n\t\"age\":\"80\",\n\t\"phone\":\"98989555\"\n}\t"
+				{
+					"name": "deleteUserDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/deleteUserDetails/5c083787ddcc3252f87bf858",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"deleteUserDetails",
+								"5c083787ddcc3252f87bf858"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/demo/user/createUser",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"demo",
-						"user",
-						"createUser"
-					]
+				{
+					"name": "updateUserDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":null,\"name\":\"suri\",\"phone\":\"9908088795\",\"age\":\"45\"}"
+						},
+						"url": {
+							"raw": "http://localhost/demo/user/updateUserDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"demo",
+								"user",
+								"updateUserDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUserDetails-ReverProxy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/demo/user/getAllUserDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"demo",
+								"user",
+								"getAllUserDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUserDetails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/demo/user/getAllUserDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"user",
+								"getAllUserDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Anji\",\n\t\"age\":\"80\",\n\t\"phone\":\"98989555\"\n}\t"
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/user/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "/test",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+			"name": "Employee",
+			"item": [
+				{
+					"name": "createNewEmployee",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Ramanji\",\n    \"lastName\": \"Sikhram\",\n    \"age\": 29,\n    \"experience\": \"2 years\",\n    \"phone\": 7327815281,\n    \"streetAdress\": \"818 N Barette Ln\",\n    \"city\": \"Newark\",\n    \"state\": \"DE\",\n    \"zipcode\": \"19702\",\n    \"workingDays\": 20,\n    \"joinDate\": \"2019-10-24T21:49:22.913+0000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/employee/createNewEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"employee",
+								"createNewEmployee"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8080/user/test",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"test"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getAllUserDetails",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "getAllEmployesList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/demo/employee/getAllEmployesList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"employee",
+								"getAllEmployesList"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/demo/user/getAllUserDetails",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"demo",
-						"user",
-						"getAllUserDetails"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "getAllUserDetails-ReverProxy",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "updateEmployee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"5db35b1e1ff4a211206e3e9f\",\r\n        \"firstName\": \"Raju\",\r\n        \"lastName\": \"Papisetti\",\r\n        \"age\": 36,\r\n        \"experience\": \"10 years\",\r\n        \"phone\": 7327815281,\r\n        \"streetAdress\": \"7231 Abbey Rd\",\r\n        \"city\": \"Elkridge\",\r\n        \"state\": \"MD\",\r\n        \"zipcode\": \"21075\",\r\n        \"workingDays\": 15,\r\n        \"joinDate\": \"2019-10-23T21:49:22.913+0000\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/demo/employee/updateEmployee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"employee",
+								"updateEmployee"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost/demo/user/getAllUserDetails",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"demo",
-						"user",
-						"getAllUserDetails"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "updateUserDetails",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"id\":null,\"name\":\"suri\",\"phone\":\"9908088795\",\"age\":\"45\"}"
+				{
+					"name": "deleteEmployee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/demo/employee/deleteEmployee/5db35c291ff4a211206e3ea1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"demo",
+								"employee",
+								"deleteEmployee",
+								"5db35c291ff4a211206e3ea1"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost/demo/user/updateUserDetails",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"path": [
-						"demo",
-						"user",
-						"updateUserDetails"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "deleteUserDetails",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "getAllUserDetails-ReverProxy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/demo/user/getAllUserDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"demo",
+								"user",
+								"getAllUserDetails"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8080/user/deleteUserDetails/5c083787ddcc3252f87bf858",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"deleteUserDetails",
-						"5c083787ddcc3252f87bf858"
-					]
+				{
+					"name": "/test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/user/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"test"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "localhost:8080/aop/getPerson",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"name\":\"anil\",\n\t\"age\":26\n}"
-				},
-				"url": {
-					"raw": "localhost:8080/aop/getPerson",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"aop",
-						"getPerson"
-					]
-				}
-			},
-			"response": []
+			],
+			"protocolProfileBehavior": {}
 		}
 	]
 }
